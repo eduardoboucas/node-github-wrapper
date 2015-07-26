@@ -34,15 +34,15 @@ Sends a `GET` request to the API, with [request data](#request-data) and a callb
 
 ### `.post(data, callback)`
 
-Sends a `POST` request to the API, with request data and a callback function.
+Sends a `POST` request to the API, with [request data](#request-data) and a callback function.
 
 ### `.put(data, callback)`
 
-Sends a `PUT` request to the API, with request data and a callback function.
+Sends a `PUT` request to the API, with [request data](#request-data) and a callback function.
 
 ### `.del(data, callback)`
 
-Sends a `DELETE` request to the API, with request data and a callback function (method is called `del()` because `delete` is a reserved word in JavaScript).
+Sends a `DELETE` request to the API, with [request data](#request-data) and a callback function (method is called `del()` because `delete` is a reserved word in JavaScript).
 
 ### Request data
 
