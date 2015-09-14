@@ -14,15 +14,32 @@ npm install node-github-wrapper
 var githubAPI = require('node-github-wrapper')({options});
 ```
 
-Options:
+### Options:
 
-- `appName`: Name of the application. Will be used in the request headers.
-- `apiRoot`: Base URL of the GitHub API. Defaults to `https://api.github.com`.
-- `headers`: Headers to be sent with all requests. Defaults to: `{'Accept': 'application-json', 'User-Agent': appName}`.
+| Option  | Description  | Default value |
+|---|---|---|
+| appName | Name of the application. Will be used in the request headers |   |
+| apiRoot  | Base URL of the GitHub API | https://api.github.com  |
+| headers  | Headers to be sent with all requests  | `{'Accept': 'application-json', 'User-Agent': appName}`  |
 
-Please note that this library **does not** handle OAuth authorization. If you need to make requests that require authorization, you'll need to handle that separately, using something like [node-oauth](https://github.com/ciaranj/node-oauth) and pass the resulting access token to this library using `setAccessToken()`.
+## Authentication
+
+This library can handle the OAuth authentication with the GitHub API. The following is a typical workflow:
+
+1. Generate a auth URL by calling `getAuthURL()`. By accessing that URL, users will be asked for permission to give your app access to their account;
+2. When permission is granted, a callback URL will be called along with an authorization code. This code can be passed to `authorize()` which will exchange that code for an access token.
+
+Alternatively, if you're already in the possession of a valid access token (i.e. you stored it in a database for subsequent requests), you can call `setAccessToken()` directly to authenticate requests.
 
 ## API
+
+### `.getAuthURL()`
+
+Generates a URL that redirects users to request GitHub access
+
+### `.authorize(code, callback)`
+
+Exchanges the OAuth code for an access token and runs the callback function
 
 ### `.setAccessToken(token)`
 
