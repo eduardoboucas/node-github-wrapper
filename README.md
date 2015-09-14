@@ -11,10 +11,10 @@ npm install node-github-wrapper
 ## Initialization
 
 ```javascript
-var githubAPI = require('node-github-wrapper')({options});
+var githubAPI = require('node-github-wrapper')(options);
 ```
 
-### Options:
+### Options (Object):
 
 | Option  | Description  | Default value |
 |---|---|---|
