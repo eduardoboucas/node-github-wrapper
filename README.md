@@ -59,7 +59,7 @@ Sends a `PUT` request to the API, with [request data](#request-data) and a callb
 
 ### `.del(data, callback)`
 
-Sends a `DELETE` request to the API, with [request data](#request-data) and a callback function (method is called `del()` because `delete` is a reserved word in JavaScript).
+Sends a `DELETE` request to the API, with [request data](#request-data) and a callback function.
 
 ### Request data
 
