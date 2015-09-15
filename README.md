@@ -33,31 +33,31 @@ Alternatively, if you're already in the possession of a valid access token (i.e.
 
 ## API
 
-### `.getAuthURL()`
+#### `.getAuthURL()`
 
 Generates a URL that redirects users to request GitHub access
 
-### `.authorize(code, callback)`
+#### `.authorize(code, callback)`
 
 Exchanges the OAuth code for an access token and runs the callback function
 
-### `.setAccessToken(token)`
+#### `.setAccessToken(token)`
 
 Sets the access token to be used by all requests that require authorization.
 
-### `.get(data, callback)`
+#### `.get(data, callback)`
 
 Sends a `GET` request to the API, with [request data](#request-data) and a callback function.
 
-### `.post(data, callback)`
+#### `.post(data, callback)`
 
 Sends a `POST` request to the API, with [request data](#request-data) and a callback function.
 
-### `.put(data, callback)`
+#### `.put(data, callback)`
 
 Sends a `PUT` request to the API, with [request data](#request-data) and a callback function.
 
-### `.del(data, callback)`
+#### `.del(data, callback)`
 
 Sends a `DELETE` request to the API, with [request data](#request-data) and a callback function.
 
